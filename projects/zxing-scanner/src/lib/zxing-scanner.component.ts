@@ -412,7 +412,7 @@ export class ZXingScannerComponent implements AfterViewInit, OnDestroy {
    *
    */
   getAnyVideoDevice(): Promise<MediaStream> {
-    return navigator.mediaDevices.getUserMedia({ video: true });
+    return navigator.mediaDevices.getUserMedia({ video: true , facingMode: 'environment'});
   }
 
   /**
